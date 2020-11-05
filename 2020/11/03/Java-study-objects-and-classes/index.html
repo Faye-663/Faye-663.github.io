@@ -31,17 +31,17 @@ https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title19-->
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Java学习笔记-继承 | Faye&#39;s blog</title>
+  <title>Java学习笔记-对象与类 | Faye&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、类、超类和子类1.覆盖方法 &amp;emsp;&amp;emsp;不能直接访问超类的私有域，需要通过关键字super来调用超类的访问器方法。但super不是同于this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。 &amp;emsp;&amp;emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。">
+  <meta name="description" content="一、面向对象概述1.基础概念 &amp;emsp;&amp;emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java学习笔记-继承">
-<meta property="og:url" content="http://example.com/2020/11/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:title" content="Java学习笔记-对象与类">
+<meta property="og:url" content="http://example.com/2020/11/03/Java-study-objects-and-classes/index.html">
 <meta property="og:site_name" content="Faye&#39;s blog">
-<meta property="og:description" content="一、类、超类和子类1.覆盖方法 &amp;emsp;&amp;emsp;不能直接访问超类的私有域，需要通过关键字super来调用超类的访问器方法。但super不是同于this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。 &amp;emsp;&amp;emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。">
+<meta property="og:description" content="一、面向对象概述1.基础概念 &amp;emsp;&amp;emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-03T11:42:55.000Z">
-<meta property="article:modified_time" content="2020-11-04T03:20:17.157Z">
+<meta property="article:published_time" content="2020-11-03T08:08:20.000Z">
+<meta property="article:modified_time" content="2020-11-03T11:18:25.507Z">
 <meta property="article:author" content="liyao deng">
 <meta property="article:tag" content="读书笔记">
 <meta property="article:tag" content="Java核心技术">
@@ -179,14 +179,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java学习笔记-继承" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java-study-objects-and-classes" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java学习笔记-继承
+      Java学习笔记-对象与类
     </h1>
   
 
@@ -208,159 +208,113 @@ var _hmt = _hmt || [];
 
 
         
-        <a href="/2020/11/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2020-11-03T11:42:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
+        <a href="/2020/11/03/Java-study-objects-and-classes/" class="archive-article-date">
+  	<time datetime="2020-11-03T08:08:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、类、超类和子类"><a href="#一、类、超类和子类" class="headerlink" title="一、类、超类和子类"></a>一、类、超类和子类</h2><p><strong>1.覆盖方法</strong></p>
-<p>&emsp;&emsp;不能直接访问超类的私有域，需要通过关键字<code>super</code>来调用超类的访问器方法。但super不是同于this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。</p>
-<p>&emsp;&emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。</p>
+        <h2 id="一、面向对象概述"><a href="#一、面向对象概述" class="headerlink" title="一、面向对象概述"></a>一、面向对象概述</h2><p><strong>1.基础概念</strong></p>
+<p>&emsp;&emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。</p>
 <a id="more"></a>
 
-<p><strong>2.子类构造器</strong></p>
+<p><strong>2.封装</strong></p>
+<p>&emsp;&emsp;从形式上看，封装不过是将数据和行为组合在一个包中，并对对象的使用者隐藏了数据的实现方式。</p>
+<p>&emsp;&emsp;关键在于决不能让类中的方法直接访问其他类的实例域，程序仅通过对象的方法与对象数据进行交互。封装给对象赋予”黑盒“特征，提高了重用性和可用性。</p>
+<p><strong>3.对象</strong></p>
 <ul>
-<li><p>可以用<code>super</code>来调用超类的构造器，但super语句必须是子类构造器的第一条语句。</p>
+<li>对象的行为</li>
+<li>对象的状态</li>
+<li>对象标识</li>
+</ul>
+<p><strong>4.类之间的关系</strong></p>
+<ul>
+<li><p>依赖（”usa-a“）</p>
+<p>&emsp;&emsp;A类的方法操纵B类的对象，则称A类依赖B类</p>
 </li>
-<li><p>若子类未显式调用超类构造器，则自动调用超类默认（无参）的构造器，但当超类没有无参的构造器，将报错。</p>
+<li><p>聚合（”has-a“）</p>
+<p>&emsp;&emsp;A类的对象包含B类的对象，则称聚合</p>
 </li>
-</ul>
-<blockquote>
-<p>1.this </p>
-<ul>
-<li>引用隐式参数</li>
-<li>调用该类其他的构造器</li>
-</ul>
-<p>2.super</p>
-<ul>
-<li>调用超类的方法</li>
-<li>调用超类的构造器</li>
-</ul>
-</blockquote>
-<p><strong>3.多态</strong></p>
-<p>&emsp;&emsp;一个对象变量可以指示多种实际类型的现象称为多态。在运行时能够自动选择调用哪个方法的现象称为__动态绑定__。Java中，对象变量是多态的。</p>
-<p>&emsp;&emsp;判断是否设计为继承，可以遵循“is-a”规则。</p>
-<p>&emsp;&emsp;“is-a”的另一种表述是__置换法则__，表明程序中超类对象出现的地方都可以用子类对象置换。</p>
-<blockquote>
-<p>Java中，子类数组的引用可以转换成超类数组的引用，无需强制转换</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Manager extends Employee</span></span><br><span class="line">Manager[] managers = <span class="keyword">new</span> Manager[<span class="number">10</span>];</span><br><span class="line">Employee[] staff = managers; <span class="comment">// OK</span></span><br><span class="line">staff[<span class="number">0</span>] = <span class="keyword">new</span> Employee(<span class="string">&quot;...&quot;</span>,...); <span class="comment">// 编译成功，运行抛ArrayStoreException</span></span><br></pre></td></tr></table></figure>
-
-<p>所有数组必须牢记创建他们的元素类型</p>
-</blockquote>
-<p><strong>4.方法调用</strong></p>
-<p>C类对象x，调用<code>x.f(args)</code></p>
-<p>&emsp;1.编译器查看对象的声明类型和方法名。编译器会一一列举所有C类中名为f的方法和其超类中public且名为f的方法。</p>
-<p>&emsp;2.编译器查看调用方法时提供的参数类型，若候选方法中有完全匹配的，就选择该方法，这个过程称为__重载解析__。未找到则抛出错误。</p>
-<p>&emsp;3.如果是private方法、static方法、final方法或构造器，则编译器可以准确地知道调用哪个方法。这种称为__静态绑定__。与之对应的是，调用的方法依赖于隐式参数的实际类型，并在运行时实现动态绑定。</p>
-<p>&emsp;4.当程序运行，并采用动态绑定调用方法是，虚拟机一定调用与x所引用对象的实际类型最合适的哪个类的方法。</p>
-<p>实际上，虚拟机会预先为每个类创建一个方法表，列出了所有方法的签名和实际调用的方法。</p>
-<p><strong>5.final</strong></p>
-<ul>
-<li>不允许拓展的类称为final类，不可被继承。</li>
-<li>final方法，子类不可覆盖。</li>
-<li>final类的方法自动成为final，但域不会</li>
-</ul>
-<p><strong>6.强制类型转换</strong></p>
-<ul>
-<li><p>一个超类的引用赋给一个子类变量时，要进行类型转换。</p>
-</li>
-<li><p>建议在类型转换前，检查一下是否能转换成功</p>
+<li><p>继承（“is-a”）</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(staff[i] <span class="keyword">instanceof</span> Manager)&#123;</span><br><span class="line">	boss = (Manager)staff[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;表示一般与特殊关系</p>
+<p><strong>5.一个对象变量并没有实际包含一个对象，而是应用了一个对象</strong></p>
+<p><strong>6.隐式参数和显式参数</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">People p = <span class="keyword">new</span> People();</span><br><span class="line">p.say(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>只能在继承层次类进行类型转换</li>
-<li>转换前，应使用<code>instanceof</code>检查</li>
-<li>尽量少用类型转换和instanceof运算符</li>
+<li><p>方法名前的对象p就是隐式参数，括号中的是显式参数。</p>
+</li>
+<li><p>关键字<code>this</code>表示隐式参数</p>
+</li>
 </ul>
-<p><strong>7.abstract</strong></p>
+<p><strong>7.访问器方法</strong></p>
+<p>不要编写返回引用可变对象的访问器方法，否则就破坏了封装性。可以先对它进行克隆（clone）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Date <span class="title">getHireDay</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (Date)hireDay.clone();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>8.final实例域</strong></p>
 <ul>
-<li>抽象方法充当占位的角色，具体实现在子类中。</li>
-<li>包含一个或多个抽象方法的类，必须被声明为抽象。</li>
-<li>抽象类可以包含具体数据和具体方法。建议尽量将通用的域和方法放在超类（不管是否抽象）</li>
-<li>抽象类不能被实例化，但可以定义一个抽象类的对象变量，然后引用非抽象子类的对象。</li>
-<li>继承抽象类：<ul>
-<li>定义部分抽象类方法，则子类为抽象类。</li>
-<li>定义所有抽象方法，子类无需抽象。</li>
+<li>大多应用于基本类型域或不可变内的域</li>
+<li>final关键字只是表示存储在变量中的对象引用不会再指示其他对象，但该对象可更改</li>
+</ul>
+<h2 id="二、静态域与静态方法"><a href="#二、静态域与静态方法" class="headerlink" title="二、静态域与静态方法"></a>二、静态域与静态方法</h2><p><strong>1.静态域</strong></p>
+<p>&emsp;&emsp;若将域定义为static，每个类中只有一个这样的域。每个对象对于所有实例域都有一份拷贝，但共享一个静态域。</p>
+<p>&emsp;&emsp;静态域属于类，而不是某个独立的对象</p>
+<p><strong>2.静态方法</strong></p>
+<p>&emsp;&emsp;静态方法不能向对象实施操作，没有隐式参数，但可以访问自身类的静态域。</p>
+<p>在下面两种情况下使用静态方法：</p>
+<ul>
+<li><p>方法不需要访问对象状态，其所需参数均由显式参数提供</p>
+</li>
+<li><p>方法只需要访问类的静态域</p>
+</li>
+<li><p>工厂方法</p>
+<p>&emsp;&emsp;使用静态工厂方法构造对象，原因主要有:</p>
+<ul>
+<li>无法命名构造器，构造器的名字必须与类名相同</li>
+<li>当使用构造器时，无法改变所构造的对象类型</li>
 </ul>
 </li>
 </ul>
-<p><strong>8.protected</strong></p>
-<p>&emsp;允许子类访问超类被protected修饰的域或方法。但要谨慎使用，受保护的方法根据实际意义，可以限制方法的使用，表明子类受信任，可以使用。</p>
-<blockquote>
-<p>private——-仅对本类可见</p>
-<p>public———所有类可见</p>
-<p>protected—–对本包和所有子类可见</p>
-<p>默认（缺省）—-对本包可见</p>
-</blockquote>
-<h2 id="二、Object"><a href="#二、Object" class="headerlink" title="二、Object"></a>二、Object</h2><p>Object类是所有类的超类。</p>
-<p><strong>1.equals方法</strong></p>
-<p>&emsp;Object类的equals方法用于检查两个对象是否相等，但我们常需要的是检查两个对象的状态是否相等。</p>
-<p>&emsp;在子类中定义equals方法时，建议首先调用超类的equals方法。</p>
-<p>&emsp;当隐式参数和显式参数不属于同一个类时，会出现问题。若使用instanceof，则在子类超类时，会返回true，违背了对称性。</p>
+<h2 id="三、方法参数"><a href="#三、方法参数" class="headerlink" title="三、方法参数"></a>三、方法参数</h2><p><strong>1.参数传递</strong></p>
 <ul>
-<li>若子类能够拥有自己的相等概念，则使用getClass()检测</li>
-<li>多由超类决定相等的概念，则可以使用instanceof检测</li>
-</ul>
-<blockquote>
-<p>equals方法编写建议：</p>
-<p>1.显式参数命名为 otherObject，稍后需要转换成另一个叫other的变量</p>
-<p>2.检测this与otherObject是否引用同一对象</p>
-<p>3.检测otherObject是否为null</p>
-<p>4.比较this与otherObject是否属于同一个类：</p>
-<ul>
-<li>若equals的语义在每个子类中有所改变，则使用getClass</li>
-<li>若所有子类都拥有统一语义，则使用instanceof</li>
-</ul>
-<p>5.将otherObject转换成相应的类类型变量</p>
-<p>6.对所有需要比较的域进行比较。使用 == 比较基本类型域，使用equals 比较对象域。</p>
-<p>7.若在子类中重新定义equals，则要包含调用<code>super.equals(other)</code>。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object otherObject)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == otherObject) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (otherObject == <span class="keyword">null</span> ) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(getClass() != otherObject.getClass())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Car other = (Car) otherObject;</span><br><span class="line">        <span class="keyword">return</span> Double.compare(other.price, price) == <span class="number">0</span> &amp;&amp;</span><br><span class="line">                Objects.equals(name, other.name); <span class="comment">// 防止null的情况</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// IDEA自动生成 nb</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><strong>2.hashCode方法</strong></p>
-<p>&emsp;&emsp;equals 与 hashCode 定义必须一致：若x.equals(y) 返回true，则x.hashCode() 与 y.hashCode()必须相同。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Objects.hash(name, price);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.toString方法</strong></p>
-<p>&emsp;&emsp;只要对象域一个字符串通过“+”连接，编译器会自动调用toString方法。建议为自己定义的每个类增加toString方法。</p>
-<h2 id="三、泛型数组列表"><a href="#三、泛型数组列表" class="headerlink" title="三、泛型数组列表"></a>三、泛型数组列表</h2><p>&emsp;&emsp;ArrayList是一个采用类型参数的泛型类。<br>&emsp;&emsp;“菱形”语法，可以结合new操作符使用，编译器会检查新值是什么。<code>ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;()</code>。</p>
-<p>&emsp;&emsp;如果调用add且内部数组已满，数组列表就会自动创建一个更大的数组，并将所有对象拷贝到该数组。如果已经能够估计出数组可能存储的元素数量，可以在填充前调用<code>ensureCapacity(n)</code>,或<code>ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;(100)</code>。</p>
-<p>&emsp;&emsp;插入和删除元素效率低。</p>
-<h2 id="四、其他"><a href="#四、其他" class="headerlink" title="四、其他"></a>四、其他</h2><p><strong>1.包装器、自动装箱</strong></p>
-<p>&emsp;&emsp;Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
-<p>&emsp;&emsp;对象包装类是不可变的，还是final的。</p>
-<p><strong>2.参数可变的方法</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span>...nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> max = Double.NEGATIVE_INFINITY;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">double</span> num:nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(num&gt;max)&#123;</span><br><span class="line">                max = num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> max = max(<span class="number">3.1</span>,<span class="number">5.2</span>,<span class="number">999</span>,-<span class="number">123</span>);</span><br><span class="line"><span class="comment">// 实际上，编译器将new double[]&#123;3.1,5.2,999,-123&#125;传递给max方法</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>3.枚举类</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Size</span></span>&#123;SMALL, MEDIUM, LARGE;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实际上，该声明定义的类型是一个类。有三个实例，尽量不要构造新对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以在枚举类型中添加一些构造器、域和方法</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Size</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 构造器只在构造枚举常量时调用</span></span><br><span class="line">    SMALL(<span class="string">&quot;s&quot;</span>), MEDIUM(<span class="string">&quot;m&quot;</span>), LARGE(<span class="string">&quot;l&quot;</span>);</span><br><span class="line">    <span class="keyword">private</span> String abb;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Size</span><span class="params">(String abb)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.abb = abb;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAbb</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> abb;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>所有枚举类型都是Enum类的子类</p>
+<li><p>Java总是采用按值调用。</p>
 </li>
-<li><p>toString方法返回枚举常量名，其逆方法为valueOf</p>
+<li><p>方法不能修改一个基本数据类型的参数。因为方法得到的是参数值的一个拷贝</p>
 </li>
-<li><p>每个枚举类型都一个values方法，返回一个包含全部枚举值得数组。</p>
+<li><p>方法可以修改一个对象的状态。因为以对象引用为参数，方法得到的是对象引用的拷贝，但该拷贝引用同一个对象。</p>
+</li>
+<li><p>方法不能让对象参数引用一个新的对象，因为方法修改的是拷贝。</p>
 </li>
 </ul>
-<h2 id="五、反射"><a href="#五、反射" class="headerlink" title="五、反射"></a>五、反射</h2><p>待续</p>
-<h2 id="六、继承的设计技巧"><a href="#六、继承的设计技巧" class="headerlink" title="六、继承的设计技巧"></a>六、继承的设计技巧</h2><p>1.将公共操作和域放在超类</p>
-<p>2.不要使用受保护的域，它并不能提供更好的保护：</p>
-<ul>
-<li>子类集合是无限制的，可以随意派生子类。</li>
-<li>本包中的所有类都可以访问</li>
-</ul>
-<p>3.使用继承实现 “is-a“ 关系</p>
-<p>4.除非所有继承的方法都有意义，否则不要使用继承</p>
-<p>5.在覆盖方法时，不要改变预期的行为</p>
-<p>6.使用多态，而非类型信息</p>
+<h2 id="四、对象构造"><a href="#四、对象构造" class="headerlink" title="四、对象构造"></a>四、对象构造</h2><p><strong>1.重载（overloading）</strong></p>
+<p>&emsp;&emsp;方法签名：方法名及参数类型，不包括返回类型。</p>
+<p>&emsp;&emsp;多个方法的方法签名相同，即为重载。</p>
+<p><strong>2.默认域初始化</strong></p>
+<p>&emsp;&emsp;若未在构造器中显式给域赋予初值，就会自动赋为默认值。（0，false，null）（不推荐）</p>
+<p><strong>3.显式域初始化</strong></p>
+<p>&emsp;&emsp;可以在类定义中，直接将一个值赋给任何域。在执行构造器前，先执行赋值操作。（适用于一个类的所有构造器都希望把相同的值赋给摸个特定的实例域）（初始值不一定是常量值，可以调用方法）</p>
+<p><strong>4.无参构造器</strong></p>
+<p>&emsp;&emsp;若一个类没有编写构造器，则系统会提供一个无参构造器，将所有实例域设为默认值。</p>
+<p><strong>5.调用另一个构造器</strong></p>
+<p>&emsp;&emsp;若构造器的第一个语句形如<code>this(...)</code>，这个构造器将调用该类对应的构造器。</p>
+<p><strong>6.初始化块</strong></p>
+<p>&emsp;&emsp;只要构造对象，这些快就会被执行。（不常见）</p>
+<p><strong>7.调用构造器具体处理步骤：</strong></p>
+<p>　　1.所有数据域被初始化为默认值<br>　　2.按照在类声明中出现的次序，依次执行所有域初始化语句和初始化块<br>　　3.若构造器第一行调用了第二个构造器，则执行第二个构造器<br>　　4.执行这个构造器主体</p>
+<p><strong>8.在内第一次加载时，就会进行静态域的初始化</strong></p>
+<h2 id="五、类设计技巧"><a href="#五、类设计技巧" class="headerlink" title="五、类设计技巧"></a>五、类设计技巧</h2><p>1.一定要保证数据私有</p>
+<p>&emsp;&emsp;不要破坏封装性</p>
+<p>2.一定要对数据进行初始化</p>
+<p>3.不要在类中使用过多的基本类型</p>
+<p>&emsp;&emsp;用其他的类代替多个相关的基本类型的使用</p>
+<p>4.不是所有的域都需要独立的域访问器和域更改器</p>
+<p>5.将职责过多的类进行分解</p>
+<p>6.类名和方法名要能够体现其职责</p>
+<p>7.优先使用不可变类</p>
 
       
 
@@ -434,7 +388,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%BB%A7%E6%89%BF/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/03/Java-study-objects-and-classes/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -448,9 +402,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2020/11/03/Java-study-extends/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java学习笔记-继承
+        
+      </div>
+    </a>
   
-    <a href="/2020/11/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java学习笔记-对象与类</div>
+  
+    <a href="/2020/11/02/Java-study-basic-programming-structure/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java学习笔记-基础程序设计结构</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -477,7 +440,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">一、类、超类和子类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Object"><span class="toc-number">2.</span> <span class="toc-text">二、Object</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84%E5%88%97%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">三、泛型数组列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96"><span class="toc-number">4.</span> <span class="toc-text">四、其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8F%8D%E5%B0%84"><span class="toc-number">5.</span> <span class="toc-text">五、反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%BB%A7%E6%89%BF%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-number">6.</span> <span class="toc-text">六、继承的设计技巧</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、面向对象概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9D%99%E6%80%81%E5%9F%9F%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">二、静态域与静态方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">三、方法参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AF%B9%E8%B1%A1%E6%9E%84%E9%80%A0"><span class="toc-number">4.</span> <span class="toc-text">四、对象构造</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">五、类设计技巧</span></a></li></ol>
                     </div>
                 </span>
             </div>
