@@ -1,1 +1,4 @@
-http://example.com/2020/11/03/Java-study-extends/
+https://faye-663.github.io/2020/11/03/Java-study-extends/
+https://faye-663.github.io/2020/11/03/Java-study-objects-and-classes/
+https://faye-663.github.io/2020/11/02/Java-study-basic-programming-structure/
+https://faye-663.github.io/2020/11/01/Hexo-yilia-Valine-GitHub-Pages-Blog-building/
