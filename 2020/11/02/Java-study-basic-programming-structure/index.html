@@ -33,15 +33,15 @@ https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title19-->
   <link rel="dns-prefetch" href="https://faye-663.github.io">
   <title>Java学习笔记-基础程序设计结构 | Faye&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、数据类型及运算符1.int 二进制 &amp;emsp;&amp;emsp; 加上前缀0b或0B可以写二进制数。 int nums &#x3D; 0b11;">
+  <meta name="description" content="一、数据类型及运算符1.int 二进制 &amp;emsp;&amp;emsp; 加上前缀 0b 或 0B 可以写二进制数。 int nums &#x3D; 0b11;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java学习笔记-基础程序设计结构">
 <meta property="og:url" content="https://faye-663.github.io/2020/11/02/Java-study-basic-programming-structure/index.html">
 <meta property="og:site_name" content="Faye&#39;s blog">
-<meta property="og:description" content="一、数据类型及运算符1.int 二进制 &amp;emsp;&amp;emsp; 加上前缀0b或0B可以写二进制数。 int nums &#x3D; 0b11;">
+<meta property="og:description" content="一、数据类型及运算符1.int 二进制 &amp;emsp;&amp;emsp; 加上前缀 0b 或 0B 可以写二进制数。 int nums &#x3D; 0b11;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-02T07:41:09.000Z">
-<meta property="article:modified_time" content="2020-11-03T11:01:10.337Z">
+<meta property="article:modified_time" content="2020-11-07T06:26:46.584Z">
 <meta property="article:author" content="liyao deng">
 <meta property="article:tag" content="读书笔记">
 <meta property="article:tag" content="Java核心技术">
@@ -217,36 +217,36 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、数据类型及运算符"><a href="#一、数据类型及运算符" class="headerlink" title="一、数据类型及运算符"></a>一、数据类型及运算符</h2><p><strong>1.int 二进制</strong></p>
-<p>&emsp;&emsp; 加上前缀0b或0B可以写二进制数。</p>
+<p>&emsp;&emsp; 加上前缀 0b 或 0B 可以写二进制数。</p>
 <p><code>int nums = 0b11;</code></p>
 <a id="more"></a>
 
 <p><strong>2.float</strong></p>
-<p>&emsp;&emsp; float数值有一个后缀F或f，否则会默认为double类型</p>
+<p>&emsp;&emsp; float 数值有一个后缀 F 或 f，否则会默认为 double 类型</p>
 <p><strong>3.Double常量</strong></p>
-<p>&emsp;&emsp; <code>Double.POSITIVE_INFINITY</code>,<code>Double.NEGATIVE_INFINITY</code>,<code>Double.NaN</code>。<br>不可以检测某个数值是否等于<code>Double.NaN</code>，所有“非数值”都认为不等，可以使用<code>Double.isNaN</code>方法。</p>
+<p>&emsp;&emsp; <code>Double.POSITIVE_INFINITY</code>,<code>Double.NEGATIVE_INFINITY</code>,<code>Double.NaN</code>。<br>不可以检测某个数值是否等于 <code>Double.NaN</code>，所有“非数值”都认为不等，可以使用 <code>Double.isNaN</code> 方法。</p>
 <p><strong>4.码点（code point）与代码单元（code unit）</strong></p>
-<p>&emsp;&emsp; 码点是指一个编码表中某个字符对应的代码值。Unicode标准使用十六进制书写码点。分成17个代码级别。第一个代码级别称为基本的多语言级别，其余16个包括一些辅助字符。<br>&emsp;&emsp; UTF-16在基本的多语言级别中，每个字符用16位表示，称为代码单元；辅助字符采用一对连续的代码单元进行编码，通常称为代替区域。<br>&emsp;&emsp; Java中，char类型描述了UTF-16编码中的一个编码单元。</p>
+<p>&emsp;&emsp; 码点是指一个编码表中某个字符对应的代码值。Unicode 标准使用十六进制书写码点。分成 17 个代码级别。第一个代码级别称为基本的多语言级别，其余 16 个包括一些辅助字符。<br>&emsp;&emsp; UTF-16 在基本的多语言级别中，每个字符用 16 位表示，称为代码单元；辅助字符采用一对连续的代码单元进行编码，通常称为代替区域。<br>&emsp;&emsp; Java 中，char 类型描述了 UTF-16 编码中的一个编码单元。</p>
 <p><strong>5.取余</strong></p>
-<p>&emsp;&emsp; 数学函数 floorMod取余，但存在负的余数。%取余均为非负。</p>
+<p>&emsp;&emsp; 数学函数 floorMod 取余，但存在负的余数。% 取余均为非负。</p>
 <p><strong>6.数值类型转换</strong></p>
 <p>&emsp;&emsp; double &gt; float &gt; long &gt; int</p>
 <p><strong>7.位运算</strong></p>
-<p>&emsp;&emsp; <code>&amp; | ^ ~</code><br>&emsp;&emsp; int数值进行左（右）移需要模32，long数值模64。 1 &lt;&lt; 35 == 1 &lt;&lt; 3</p>
+<p>&emsp;&emsp; <code>&amp; | ^ ~</code><br>&emsp;&emsp; int 数值进行左（右）移需要模 32，long 数值模 64。 1 &lt;&lt; 35 == 1 &lt;&lt; 3</p>
 <h2 id="二、字符串"><a href="#二、字符串" class="headerlink" title="二、字符串"></a>二、字符串</h2><p><strong>1.不可变字符串</strong></p>
-<p>&emsp;&emsp; String类对象是不可变字符串，即不可修改。但编译器可以让字符串共享，字符串存放在公共存储池，复制时，共享相同字符。</p>
+<p>&emsp;&emsp; String 类对象是不可变字符串，即不可修改。但编译器可以让字符串共享，字符串存放在公共存储池，复制时，共享相同字符。</p>
 <p><strong>2.<code>charAt(i)</code></strong></p>
-<p>&emsp;&emsp; <code>charAt(i)</code>返回位置i的代码单元（不是码点）。</p>
+<p>&emsp;&emsp; <code>charAt(i)</code> 返回位置 i 的代码单元（不是码点）。</p>
 <p><strong>3.+</strong></p>
-<p>&emsp;&emsp; 构建字符串，每次连接字符串，都会构建一个新的String对象，耗时浪费空间。建议使用StringBuilder类解决</p>
+<p>&emsp;&emsp; 构建字符串，每次连接字符串，都会构建一个新的 String 对象，耗时浪费空间。建议使用 StringBuilder 类解决</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">stringBuilder.append(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">stringBuilder.append(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">String str = stringBuilder.toString();</span><br></pre></td></tr></table></figure>
 
 <p><strong>4.格式化</strong></p>
-<p>&emsp;&emsp; <code>String.format()</code>格式化字符串。</p>
-<h2 id="三、控制流程"><a href="#三、控制流程" class="headerlink" title="三、控制流程"></a>三、控制流程</h2><p><strong>1.带标签的<code>break</code>、<code>continue</code></strong></p>
+<p>&emsp;&emsp; <code>String.format()</code> 格式化字符串。</p>
+<h2 id="三、控制流程"><a href="#三、控制流程" class="headerlink" title="三、控制流程"></a>三、控制流程</h2><p><strong>1.带标签的 <code>break</code>、<code>continue</code></strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tag1:</span><br><span class="line"><span class="keyword">while</span> ()&#123;</span><br><span class="line">    <span class="keyword">while</span>()&#123;</span><br><span class="line">        <span class="keyword">if</span>()&#123;</span><br><span class="line">            <span class="keyword">break</span> tag1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="四、数组"><a href="#四、数组" class="headerlink" title="四、数组"></a>四、数组</h2><p><strong>1.数组拷贝</strong></p>
-<p>&emsp;&emsp; Java允许将一个数组变量拷贝给另一个数组变量，但这两个变量引用同一个数组。</p>
+<p>&emsp;&emsp; Java 允许将一个数组变量拷贝给另一个数组变量，但这两个变量引用同一个数组。</p>
 <p><strong>2.不规则数组</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] nums = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>][];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    nums[i] = <span class="keyword">new</span> <span class="keyword">int</span>[i+<span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
