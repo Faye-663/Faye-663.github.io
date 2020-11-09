@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://faye-663.github.io/2020/11/02/Java-study-basic-programming-structure/</loc>
+    
+    <lastmod>2020-11-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://faye-663.github.io/2020/11/03/Java-study-objects-and-classes/</loc>
     
     <lastmod>2020-11-07</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://faye-663.github.io/2020/11/03/Java-study-extends/</loc>
-    
-    <lastmod>2020-11-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://faye-663.github.io/2020/11/02/Java-study-basic-programming-structure/</loc>
     
     <lastmod>2020-11-07</lastmod>
     
@@ -39,7 +39,7 @@
 
   <url>
     <loc>https://faye-663.github.io/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -47,28 +47,28 @@
   
   <url>
     <loc>https://faye-663.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://faye-663.github.io/tags/hexo/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://faye-663.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://faye-663.github.io/tags/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
