@@ -33,15 +33,15 @@ https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title19-->
   <link rel="dns-prefetch" href="https://faye-663.github.io">
   <title>Java学习笔记-对象与类 | Faye&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、面向对象概述1.基础概念 &amp;emsp;&amp;emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。">
+  <meta name="description" content="一、面向对象概述1.基础概念&amp;emsp;&amp;emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java学习笔记-对象与类">
 <meta property="og:url" content="https://faye-663.github.io/2020/11/03/Java-study-objects-and-classes/index.html">
 <meta property="og:site_name" content="Faye&#39;s blog">
-<meta property="og:description" content="一、面向对象概述1.基础概念 &amp;emsp;&amp;emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。">
+<meta property="og:description" content="一、面向对象概述1.基础概念&amp;emsp;&amp;emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-03T08:08:20.000Z">
-<meta property="article:modified_time" content="2020-11-07T06:32:52.167Z">
+<meta property="article:modified_time" content="2020-11-10T10:37:23.153Z">
 <meta property="article:author" content="liyao deng">
 <meta property="article:tag" content="读书笔记">
 <meta property="article:tag" content="Java核心技术">
@@ -216,21 +216,17 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、面向对象概述"><a href="#一、面向对象概述" class="headerlink" title="一、面向对象概述"></a>一、面向对象概述</h2><p><strong>1.基础概念</strong></p>
-<p>&emsp;&emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。</p>
+        <h2 id="一、面向对象概述"><a href="#一、面向对象概述" class="headerlink" title="一、面向对象概述"></a>一、面向对象概述</h2><h5 id="1-基础概念"><a href="#1-基础概念" class="headerlink" title="1.基础概念"></a>1.基础概念</h5><p>&emsp;&emsp;对象中的数据称为实例域，操纵数据的过程称为方法。每个特定的对象都有一组特定的实例域值，这些值的集合称为该对象的状态。</p>
 <a id="more"></a>
 
-<p><strong>2.封装</strong></p>
-<p>&emsp;&emsp;从形式上看，封装不过是将数据和行为组合在一个包中，并对对象的使用者隐藏了数据的实现方式。</p>
+<h5 id="2-封装"><a href="#2-封装" class="headerlink" title="2.封装"></a>2.封装</h5><p>&emsp;&emsp;从形式上看，封装不过是将数据和行为组合在一个包中，并对对象的使用者隐藏了数据的实现方式。</p>
 <p>&emsp;&emsp;关键在于决不能让类中的方法直接访问其他类的实例域，程序仅通过对象的方法与对象数据进行交互。封装给对象赋予”黑盒“特征，提高了重用性和可用性。</p>
-<p><strong>3.对象</strong></p>
-<ul>
+<h5 id="3-对象"><a href="#3-对象" class="headerlink" title="3.对象"></a>3.对象</h5><ul>
 <li>对象的行为</li>
 <li>对象的状态</li>
 <li>对象标识</li>
 </ul>
-<p><strong>4.类之间的关系</strong></p>
-<ul>
+<h5 id="4-类之间的关系"><a href="#4-类之间的关系" class="headerlink" title="4.类之间的关系"></a>4.类之间的关系</h5><ul>
 <li><p>依赖（”usa-a“）</p>
 <p>&emsp;&emsp;A 类的方法操纵 B 类的对象，则称 A 类依赖 B 类</p>
 </li>
@@ -241,9 +237,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>&emsp;&emsp;表示一般与特殊关系</p>
-<p><strong>5.一个对象变量并没有实际包含一个对象，而是应用了一个对象</strong></p>
-<p><strong>6.隐式参数和显式参数</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">People p = <span class="keyword">new</span> People();</span><br><span class="line">p.say(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="5-一个对象变量并没有实际包含一个对象，而是应用了一个对象"><a href="#5-一个对象变量并没有实际包含一个对象，而是应用了一个对象" class="headerlink" title="5.一个对象变量并没有实际包含一个对象，而是应用了一个对象"></a>5.一个对象变量并没有实际包含一个对象，而是应用了一个对象</h5><h5 id="6-隐式参数和显式参数"><a href="#6-隐式参数和显式参数" class="headerlink" title="6.隐式参数和显式参数"></a>6.隐式参数和显式参数</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">People p = <span class="keyword">new</span> People();</span><br><span class="line">p.say(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>方法名前的对象 p 就是隐式参数，括号中的是显式参数。</p>
@@ -251,20 +245,16 @@ var _hmt = _hmt || [];
 <li><p>关键字 <code>this</code> 表示隐式参数</p>
 </li>
 </ul>
-<p><strong>7.访问器方法</strong></p>
-<p>不要编写返回引用可变对象的访问器方法，否则就破坏了封装性。可以先对它进行克隆（clone）</p>
+<h5 id="7-访问器方法"><a href="#7-访问器方法" class="headerlink" title="7.访问器方法"></a>7.访问器方法</h5><p>不要编写返回引用可变对象的访问器方法，否则就破坏了封装性。可以先对它进行克隆（clone）</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Date <span class="title">getHireDay</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (Date)hireDay.clone();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>8.final实例域</strong></p>
-<ul>
+<h5 id="8-final实例域"><a href="#8-final实例域" class="headerlink" title="8.final实例域"></a>8.final实例域</h5><ul>
 <li>大多应用于基本类型域或不可变内的域</li>
-<li>final 关键字只是表示存储在变量中的对象引用不会再指示其他对象，但该对象可更改</li>
+<li><code>final</code> 关键字只是表示存储在变量中的对象引用不会再指示其他对象，但该对象可更改</li>
 </ul>
-<h2 id="二、静态域与静态方法"><a href="#二、静态域与静态方法" class="headerlink" title="二、静态域与静态方法"></a>二、静态域与静态方法</h2><p><strong>1.静态域</strong></p>
-<p>&emsp;&emsp;若将域定义为 static，每个类中只有一个这样的域。每个对象对于所有实例域都有一份拷贝，但共享一个静态域。</p>
+<h2 id="二、静态域与静态方法"><a href="#二、静态域与静态方法" class="headerlink" title="二、静态域与静态方法"></a>二、静态域与静态方法</h2><h5 id="1-静态域"><a href="#1-静态域" class="headerlink" title="1.静态域"></a>1.静态域</h5><p>&emsp;&emsp;若将域定义为 <code>static</code>，每个类中只有一个这样的域。每个对象对于所有实例域都有一份拷贝，但共享一个静态域。</p>
 <p>&emsp;&emsp;静态域属于类，而不是某个独立的对象</p>
-<p><strong>2.静态方法</strong></p>
-<p>&emsp;&emsp;静态方法不能向对象实施操作，没有隐式参数，但可以访问自身类的静态域。</p>
+<h5 id="2-静态方法"><a href="#2-静态方法" class="headerlink" title="2.静态方法"></a>2.静态方法</h5><p>&emsp;&emsp;静态方法不能向对象实施操作，没有隐式参数，但可以访问自身类的静态域。</p>
 <p>在下面两种情况下使用静态方法：</p>
 <ul>
 <li><p>方法不需要访问对象状态，其所需参数均由显式参数提供</p>
@@ -279,8 +269,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h2 id="三、方法参数"><a href="#三、方法参数" class="headerlink" title="三、方法参数"></a>三、方法参数</h2><p><strong>1.参数传递</strong></p>
-<ul>
+<h2 id="三、方法参数"><a href="#三、方法参数" class="headerlink" title="三、方法参数"></a>三、方法参数</h2><h5 id="1-参数传递"><a href="#1-参数传递" class="headerlink" title="1.参数传递"></a>1.参数传递</h5><ul>
 <li><p>Java 总是采用按值调用。</p>
 </li>
 <li><p>方法不能修改一个基本数据类型的参数。因为方法得到的是参数值的一个拷贝</p>
@@ -290,23 +279,15 @@ var _hmt = _hmt || [];
 <li><p>方法不能让对象参数引用一个新的对象，因为方法修改的是拷贝。</p>
 </li>
 </ul>
-<h2 id="四、对象构造"><a href="#四、对象构造" class="headerlink" title="四、对象构造"></a>四、对象构造</h2><p><strong>1.重载（overloading）</strong></p>
-<p>&emsp;&emsp;方法签名：方法名及参数类型，不包括返回类型。</p>
+<h2 id="四、对象构造"><a href="#四、对象构造" class="headerlink" title="四、对象构造"></a>四、对象构造</h2><h5 id="1-重载（overloading）"><a href="#1-重载（overloading）" class="headerlink" title="1.重载（overloading）"></a>1.重载（overloading）</h5><p>&emsp;&emsp;方法签名：方法名及参数类型，不包括返回类型。</p>
 <p>&emsp;&emsp;多个方法的方法签名相同，即为重载。</p>
-<p><strong>2.默认域初始化</strong></p>
-<p>&emsp;&emsp;若未在构造器中显式给域赋予初值，就会自动赋为默认值。（0，false，null）（不推荐）</p>
-<p><strong>3.显式域初始化</strong></p>
-<p>&emsp;&emsp;可以在类定义中，直接将一个值赋给任何域。在执行构造器前，先执行赋值操作。（适用于一个类的所有构造器都希望把相同的值赋给摸个特定的实例域）（初始值不一定是常量值，可以调用方法）</p>
-<p><strong>4.无参构造器</strong></p>
-<p>&emsp;&emsp;若一个类没有编写构造器，则系统会提供一个无参构造器，将所有实例域设为默认值。</p>
-<p><strong>5.调用另一个构造器</strong></p>
-<p>&emsp;&emsp;若构造器的第一个语句形如 <code>this(...)</code>，这个构造器将调用该类对应的构造器。</p>
-<p><strong>6.初始化块</strong></p>
-<p>&emsp;&emsp;只要构造对象，这些快就会被执行。（不常见）</p>
-<p><strong>7.调用构造器具体处理步骤：</strong></p>
-<p>　　1.所有数据域被初始化为默认值<br>　　2.按照在类声明中出现的次序，依次执行所有域初始化语句和初始化块<br>　　3.若构造器第一行调用了第二个构造器，则执行第二个构造器<br>　　4.执行这个构造器主体</p>
-<p><strong>8.在内第一次加载时，就会进行静态域的初始化</strong></p>
-<h2 id="五、类设计技巧"><a href="#五、类设计技巧" class="headerlink" title="五、类设计技巧"></a>五、类设计技巧</h2><p>1.一定要保证数据私有</p>
+<h5 id="2-默认域初始化"><a href="#2-默认域初始化" class="headerlink" title="2.默认域初始化"></a>2.默认域初始化</h5><p>&emsp;&emsp;若未在构造器中显式给域赋予初值，就会自动赋为默认值。（0，false，null）（不推荐）</p>
+<h5 id="3-显式域初始化"><a href="#3-显式域初始化" class="headerlink" title="3.显式域初始化"></a>3.显式域初始化</h5><p>&emsp;&emsp;可以在类定义中，直接将一个值赋给任何域。在执行构造器前，先执行赋值操作。（适用于一个类的所有构造器都希望把相同的值赋给摸个特定的实例域）（初始值不一定是常量值，可以调用方法）</p>
+<h5 id="4-无参构造器"><a href="#4-无参构造器" class="headerlink" title="4.无参构造器"></a>4.无参构造器</h5><p>&emsp;&emsp;若一个类没有编写构造器，则系统会提供一个无参构造器，将所有实例域设为默认值。</p>
+<h5 id="5-调用另一个构造器"><a href="#5-调用另一个构造器" class="headerlink" title="5.调用另一个构造器"></a>5.调用另一个构造器</h5><p>&emsp;&emsp;若构造器的第一个语句形如 <code>this(...)</code>，这个构造器将调用该类对应的构造器。</p>
+<h5 id="6-初始化块"><a href="#6-初始化块" class="headerlink" title="6.初始化块"></a>6.初始化块</h5><p>&emsp;&emsp;只要构造对象，这些快就会被执行。（不常见）</p>
+<h5 id="7-调用构造器具体处理步骤："><a href="#7-调用构造器具体处理步骤：" class="headerlink" title="7.调用构造器具体处理步骤："></a>7.调用构造器具体处理步骤：</h5><p>　　1.所有数据域被初始化为默认值<br>　　2.按照在类声明中出现的次序，依次执行所有域初始化语句和初始化块<br>　　3.若构造器第一行调用了第二个构造器，则执行第二个构造器<br>　　4.执行这个构造器主体</p>
+<h5 id="8-在内第一次加载时，就会进行静态域的初始化"><a href="#8-在内第一次加载时，就会进行静态域的初始化" class="headerlink" title="8.在内第一次加载时，就会进行静态域的初始化"></a>8.在内第一次加载时，就会进行静态域的初始化</h5><h2 id="五、类设计技巧"><a href="#五、类设计技巧" class="headerlink" title="五、类设计技巧"></a>五、类设计技巧</h2><p>1.一定要保证数据私有</p>
 <p>&emsp;&emsp;不要破坏封装性</p>
 <p>2.一定要对数据进行初始化</p>
 <p>3.不要在类中使用过多的基本类型</p>
@@ -440,7 +421,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、面向对象概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9D%99%E6%80%81%E5%9F%9F%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">二、静态域与静态方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">三、方法参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AF%B9%E8%B1%A1%E6%9E%84%E9%80%A0"><span class="toc-number">4.</span> <span class="toc-text">四、对象构造</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">五、类设计技巧</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、面向对象概述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1.基础概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%B0%81%E8%A3%85"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2.封装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">3.对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">4.类之间的关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%8F%98%E9%87%8F%E5%B9%B6%E6%B2%A1%E6%9C%89%E5%AE%9E%E9%99%85%E5%8C%85%E5%90%AB%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E8%80%8C%E6%98%AF%E5%BA%94%E7%94%A8%E4%BA%86%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">5.一个对象变量并没有实际包含一个对象，而是应用了一个对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E9%9A%90%E5%BC%8F%E5%8F%82%E6%95%B0%E5%92%8C%E6%98%BE%E5%BC%8F%E5%8F%82%E6%95%B0"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">6.隐式参数和显式参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-%E8%AE%BF%E9%97%AE%E5%99%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">7.访问器方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-final%E5%AE%9E%E4%BE%8B%E5%9F%9F"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">8.final实例域</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9D%99%E6%80%81%E5%9F%9F%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">二、静态域与静态方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%9D%99%E6%80%81%E5%9F%9F"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">1.静态域</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">2.静态方法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%B9%E6%B3%95%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">三、方法参数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">1.参数传递</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AF%B9%E8%B1%A1%E6%9E%84%E9%80%A0"><span class="toc-number">4.</span> <span class="toc-text">四、对象构造</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%87%8D%E8%BD%BD%EF%BC%88overloading%EF%BC%89"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">1.重载（overloading）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%BB%98%E8%AE%A4%E5%9F%9F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">4.0.0.2.</span> <span class="toc-text">2.默认域初始化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%98%BE%E5%BC%8F%E5%9F%9F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">4.0.0.3.</span> <span class="toc-text">3.显式域初始化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">4.0.0.4.</span> <span class="toc-text">4.无参构造器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">4.0.0.5.</span> <span class="toc-text">5.调用另一个构造器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97"><span class="toc-number">4.0.0.6.</span> <span class="toc-text">6.初始化块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-%E8%B0%83%E7%94%A8%E6%9E%84%E9%80%A0%E5%99%A8%E5%85%B7%E4%BD%93%E5%A4%84%E7%90%86%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number">4.0.0.7.</span> <span class="toc-text">7.调用构造器具体处理步骤：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E5%9C%A8%E5%86%85%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8A%A0%E8%BD%BD%E6%97%B6%EF%BC%8C%E5%B0%B1%E4%BC%9A%E8%BF%9B%E8%A1%8C%E9%9D%99%E6%80%81%E5%9F%9F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">4.0.0.8.</span> <span class="toc-text">8.在内第一次加载时，就会进行静态域的初始化</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%B1%BB%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-number">5.</span> <span class="toc-text">五、类设计技巧</span></a></li></ol>
                     </div>
                 </span>
             </div>

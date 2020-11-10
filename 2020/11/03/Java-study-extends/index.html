@@ -33,15 +33,15 @@ https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title19-->
   <link rel="dns-prefetch" href="https://faye-663.github.io">
   <title>Java学习笔记-继承 | Faye&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、类、超类和子类1.覆盖方法 &amp;emsp;&amp;emsp;不能直接访问超类的私有域，需要通过关键字 super 来调用超类的访问器方法。但 super 不是同于 this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。 &amp;emsp;&amp;emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。">
+  <meta name="description" content="一、类、超类和子类1.覆盖方法&amp;emsp;&amp;emsp;不能直接访问超类的私有域，需要通过关键字 super 来调用超类的访问器方法。但 super 不是同于 this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。 &amp;emsp;&amp;emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java学习笔记-继承">
 <meta property="og:url" content="https://faye-663.github.io/2020/11/03/Java-study-extends/index.html">
 <meta property="og:site_name" content="Faye&#39;s blog">
-<meta property="og:description" content="一、类、超类和子类1.覆盖方法 &amp;emsp;&amp;emsp;不能直接访问超类的私有域，需要通过关键字 super 来调用超类的访问器方法。但 super 不是同于 this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。 &amp;emsp;&amp;emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。">
+<meta property="og:description" content="一、类、超类和子类1.覆盖方法&amp;emsp;&amp;emsp;不能直接访问超类的私有域，需要通过关键字 super 来调用超类的访问器方法。但 super 不是同于 this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。 &amp;emsp;&amp;emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-03T11:42:55.000Z">
-<meta property="article:modified_time" content="2020-11-07T06:31:46.088Z">
+<meta property="article:modified_time" content="2020-11-10T10:36:58.809Z">
 <meta property="article:author" content="liyao deng">
 <meta property="article:tag" content="读书笔记">
 <meta property="article:tag" content="Java核心技术">
@@ -216,32 +216,29 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、类、超类和子类"><a href="#一、类、超类和子类" class="headerlink" title="一、类、超类和子类"></a>一、类、超类和子类</h2><p><strong>1.覆盖方法</strong></p>
-<p>&emsp;&emsp;不能直接访问超类的私有域，需要通过关键字 <code>super</code> 来调用超类的访问器方法。但 super 不是同于 this，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。</p>
+        <h2 id="一、类、超类和子类"><a href="#一、类、超类和子类" class="headerlink" title="一、类、超类和子类"></a>一、类、超类和子类</h2><h5 id="1-覆盖方法"><a href="#1-覆盖方法" class="headerlink" title="1.覆盖方法"></a>1.覆盖方法</h5><p>&emsp;&emsp;不能直接访问超类的私有域，需要通过关键字 <code>super</code> 来调用超类的访问器方法。但 <code>super</code> 不是同于 <code>this</code>，它不是一个对象的引用，只是一个指示编译器调用超类方法的关键字。</p>
 <p>&emsp;&emsp;覆盖方法时，子类的方法不能低于超类方法的可见性。</p>
 <a id="more"></a>
 
-<p><strong>2.子类构造器</strong></p>
-<ul>
-<li><p>可以用 <code>super</code> 来调用超类的构造器，但 super 语句必须是子类构造器的第一条语句。</p>
+<h5 id="2-子类构造器"><a href="#2-子类构造器" class="headerlink" title="2.子类构造器"></a>2.子类构造器</h5><ul>
+<li><p>可以用 <code>super</code> 来调用超类的构造器，但 <code>super</code> 语句必须是子类构造器的第一条语句。</p>
 </li>
 <li><p>若子类未显式调用超类构造器，则自动调用超类默认（无参）的构造器，但当超类没有无参的构造器，将报错。</p>
 </li>
 </ul>
 <blockquote>
-<p>1.this </p>
+<p>1.<code>this </code></p>
 <ul>
 <li>引用隐式参数</li>
 <li>调用该类其他的构造器</li>
 </ul>
-<p>2.super</p>
+<p>2.<code>super</code></p>
 <ul>
 <li>调用超类的方法</li>
 <li>调用超类的构造器</li>
 </ul>
 </blockquote>
-<p><strong>3.多态</strong></p>
-<p>&emsp;&emsp;一个对象变量可以指示多种实际类型的现象称为多态。在运行时能够自动选择调用哪个方法的现象称为__动态绑定__。Java 中，对象变量是多态的。</p>
+<h5 id="3-多态"><a href="#3-多态" class="headerlink" title="3.多态"></a>3.多态</h5><p>&emsp;&emsp;一个对象变量可以指示多种实际类型的现象称为多态。在运行时能够自动选择调用哪个方法的现象称为__动态绑定__。Java 中，对象变量是多态的。</p>
 <p>&emsp;&emsp;判断是否设计为继承，可以遵循“is-a”规则。</p>
 <p>&emsp;&emsp;“is-a” 的另一种表述是__置换法则__，表明程序中超类对象出现的地方都可以用子类对象置换。</p>
 <blockquote>
@@ -250,21 +247,18 @@ var _hmt = _hmt || [];
 
 <p>所有数组必须牢记创建他们的元素类型</p>
 </blockquote>
-<p><strong>4.方法调用</strong></p>
-<p>C 类对象 x，调用 <code>x.f(args)</code></p>
-<p>&emsp;1.编译器查看对象的声明类型和方法名。编译器会一一列举所有 C 类中名为f的方法和其超类中 public 且名为 f 的方法。</p>
+<h5 id="4-方法调用"><a href="#4-方法调用" class="headerlink" title="4.方法调用"></a>4.方法调用</h5><p>C 类对象 x，调用 <code>x.f(args)</code></p>
+<p>&emsp;1.编译器查看对象的声明类型和方法名。编译器会一一列举所有 C 类中名为f的方法和其超类中 <code>public</code> 且名为 <code>f</code> 的方法。</p>
 <p>&emsp;2.编译器查看调用方法时提供的参数类型，若候选方法中有完全匹配的，就选择该方法，这个过程称为__重载解析__。未找到则抛出错误。</p>
-<p>&emsp;3.如果是 private 方法、static 方法、final 方法或构造器，则编译器可以准确地知道调用哪个方法。这种称为__静态绑定__。与之对应的是，调用的方法依赖于隐式参数的实际类型，并在运行时实现动态绑定。</p>
-<p>&emsp;4.当程序运行，并采用动态绑定调用方法是，虚拟机一定调用与 x 所引用对象的实际类型最合适的哪个类的方法。</p>
+<p>&emsp;3.如果是 <code>private</code> 方法、<code>static</code> 方法、<code>final</code> 方法或构造器，则编译器可以准确地知道调用哪个方法。这种称为__静态绑定__。与之对应的是，调用的方法依赖于隐式参数的实际类型，并在运行时实现动态绑定。</p>
+<p>&emsp;4.当程序运行，并采用动态绑定调用方法是，虚拟机一定调用与 <code>x</code> 所引用对象的实际类型最合适的哪个类的方法。</p>
 <p>实际上，虚拟机会预先为每个类创建一个方法表，列出了所有方法的签名和实际调用的方法。</p>
-<p><strong>5.final</strong></p>
-<ul>
-<li>不允许拓展的类称为 final 类，不可被继承。</li>
-<li>final 方法，子类不可覆盖。</li>
-<li>final 类的方法自动成为 final，但域不会</li>
+<h5 id="5-final"><a href="#5-final" class="headerlink" title="5.final"></a>5.final</h5><ul>
+<li>不允许拓展的类称为 <code>final</code> 类，不可被继承。</li>
+<li><code>final</code> 方法，子类不可覆盖。</li>
+<li><code>final</code> 类的方法自动成为 <code>final</code>，但域不会</li>
 </ul>
-<p><strong>6.强制类型转换</strong></p>
-<ul>
+<h5 id="6-强制类型转换"><a href="#6-强制类型转换" class="headerlink" title="6.强制类型转换"></a>6.强制类型转换</h5><ul>
 <li><p>一个超类的引用赋给一个子类变量时，要进行类型转换。</p>
 </li>
 <li><p>建议在类型转换前，检查一下是否能转换成功</p>
@@ -275,10 +269,9 @@ var _hmt = _hmt || [];
 <ul>
 <li>只能在继承层次类进行类型转换</li>
 <li>转换前，应使用 <code>instanceof</code> 检查</li>
-<li>尽量少用类型转换和 instanceof 运算符</li>
+<li>尽量少用类型转换和 <code>instanceof</code> 运算符</li>
 </ul>
-<p><strong>7.abstract</strong></p>
-<ul>
+<h5 id="7-abstract"><a href="#7-abstract" class="headerlink" title="7.abstract"></a>7.abstract</h5><ul>
 <li>抽象方法充当占位的角色，具体实现在子类中。</li>
 <li>包含一个或多个抽象方法的类，必须被声明为抽象。</li>
 <li>抽象类可以包含具体数据和具体方法。建议尽量将通用的域和方法放在超类（不管是否抽象）</li>
@@ -289,8 +282,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p><strong>8.protected</strong></p>
-<p>&emsp;允许子类访问超类被 protected 修饰的域或方法。但要谨慎使用，受保护的方法根据实际意义，可以限制方法的使用，表明子类受信任，可以使用。</p>
+<h5 id="8-protected"><a href="#8-protected" class="headerlink" title="8.protected"></a>8.protected</h5><p>&emsp;允许子类访问超类被 <code>protected</code> 修饰的域或方法。但要谨慎使用，受保护的方法根据实际意义，可以限制方法的使用，表明子类受信任，可以使用。</p>
 <blockquote>
 <p>private——-仅对本类可见</p>
 <p>public———所有类可见</p>
@@ -298,13 +290,12 @@ var _hmt = _hmt || [];
 <p>默认（缺省）—-对本包可见</p>
 </blockquote>
 <h2 id="二、Object"><a href="#二、Object" class="headerlink" title="二、Object"></a>二、Object</h2><p>Object 类是所有类的超类。</p>
-<p><strong>1.equals 方法</strong></p>
-<p>&emsp;Object 类的 equals 方法用于检查两个对象是否相等，但我们常需要的是检查两个对象的状态是否相等。</p>
-<p>&emsp;在子类中定义 equals 方法时，建议首先调用超类的 equals 方法。</p>
-<p>&emsp;当隐式参数和显式参数不属于同一个类时，会出现问题。若使用 instanceof，则在子类超类时，会返回 true，违背了对称性。</p>
+<h5 id="1-equals-方法"><a href="#1-equals-方法" class="headerlink" title="1.equals 方法"></a>1.equals 方法</h5><p>&emsp;Object 类的 <code>equals</code> 方法用于检查两个对象是否相等，但我们常需要的是检查两个对象的状态是否相等。</p>
+<p>&emsp;在子类中定义 <code>equals</code> 方法时，建议首先调用超类的 <code>equals</code> 方法。</p>
+<p>&emsp;当隐式参数和显式参数不属于同一个类时，会出现问题。若使用 <code>instanceof</code>，则在子类超类时，会返回 <code>true</code>，违背了对称性。</p>
 <ul>
-<li>若子类能够拥有自己的相等概念，则使用 getClass() 检测</li>
-<li>多由超类决定相等的概念，则可以使用 instanceof 检测</li>
+<li>若子类能够拥有自己的相等概念，则使用 <code>getClass()</code> 检测</li>
+<li>多由超类决定相等的概念，则可以使用 <code>instanceof</code> 检测</li>
 </ul>
 <blockquote>
 <p>equals方法编写建议：</p>
@@ -321,33 +312,28 @@ var _hmt = _hmt || [];
 <p>7.若在子类中重新定义 equals，则要包含调用 <code>super.equals(other)</code>。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object otherObject)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == otherObject) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (otherObject == <span class="keyword">null</span> ) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(getClass() != otherObject.getClass())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Car other = (Car) otherObject;</span><br><span class="line">        <span class="keyword">return</span> Double.compare(other.price, price) == <span class="number">0</span> &amp;&amp;</span><br><span class="line">                Objects.equals(name, other.name); <span class="comment">// 防止 null 的情况</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// IDEA 自动生成 nb</span></span><br></pre></td></tr></table></figure>
 </blockquote>
-<p><strong>2.hashCode方法</strong></p>
-<p>&emsp;&emsp;equals 与 hashCode 定义必须一致：若 x.equals(y) 返回 true，则 x.hashCode() 与 y.hashCode() 必须相同。</p>
+<h5 id="2-hashCode方法"><a href="#2-hashCode方法" class="headerlink" title="2.hashCode方法"></a>2.hashCode方法</h5><p>&emsp;&emsp;<code>equals</code> 与 <code>hashCode</code> 定义必须一致：若 <code>x.equals(y)</code> 返回 <code>true</code>，则 <code>x.hashCode()</code> 与 <code>y.hashCode()</code> 必须相同。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Objects.hash(name, price);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>3.toString 方法</strong></p>
-<p>&emsp;&emsp;只要对象域一个字符串通过 “+” 连接，编译器会自动调用 toString 方法。建议为自己定义的每个类增加 toString 方法。</p>
-<h2 id="三、泛型数组列表"><a href="#三、泛型数组列表" class="headerlink" title="三、泛型数组列表"></a>三、泛型数组列表</h2><p>&emsp;&emsp;ArrayList 是一个采用类型参数的泛型类。<br>&emsp;&emsp;“菱形”语法，可以结合 new 操作符使用，编译器会检查新值是什么。<code>ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;()</code>。</p>
-<p>&emsp;&emsp;如果调用 add 且内部数组已满，数组列表就会自动创建一个更大的数组，并将所有对象拷贝到该数组。如果已经能够估计出数组可能存储的元素数量，可以在填充前调用 <code>ensureCapacity(n)</code>,或<code>ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;(100)</code>。</p>
+<h5 id="3-toString-方法"><a href="#3-toString-方法" class="headerlink" title="3.toString 方法"></a>3.toString 方法</h5><p>&emsp;&emsp;只要对象域一个字符串通过 “+” 连接，编译器会自动调用 <code>toString</code> 方法。建议为自己定义的每个类增加 <code>toString</code> 方法。</p>
+<h2 id="三、泛型数组列表"><a href="#三、泛型数组列表" class="headerlink" title="三、泛型数组列表"></a>三、泛型数组列表</h2><p>&emsp;&emsp;ArrayList 是一个采用类型参数的泛型类。<br>&emsp;&emsp;“菱形”语法，可以结合 <code>new</code> 操作符使用，编译器会检查新值是什么。<code>ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;()</code>。</p>
+<p>&emsp;&emsp;如果调用 <code>add</code> 且内部数组已满，数组列表就会自动创建一个更大的数组，并将所有对象拷贝到该数组。如果已经能够估计出数组可能存储的元素数量，可以在填充前调用 <code>ensureCapacity(n)</code>,或<code>ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;(100)</code>。</p>
 <p>&emsp;&emsp;插入和删除元素效率低。</p>
-<h2 id="四、其他"><a href="#四、其他" class="headerlink" title="四、其他"></a>四、其他</h2><p><strong>1.包装器、自动装箱</strong></p>
-<p>&emsp;&emsp;Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
-<p>&emsp;&emsp;对象包装类是不可变的，还是final的。</p>
-<p><strong>2.参数可变的方法</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span>...nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> max = Double.NEGATIVE_INFINITY;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">double</span> num:nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(num&gt;max)&#123;</span><br><span class="line">                max = num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> max = max(<span class="number">3.1</span>,<span class="number">5.2</span>,<span class="number">999</span>,-<span class="number">123</span>);</span><br><span class="line"><span class="comment">// 实际上，编译器将 new double[]&#123;3.1,5.2,999,-123&#125;传递给 max 方法</span></span><br></pre></td></tr></table></figure>
+<h2 id="四、其他"><a href="#四、其他" class="headerlink" title="四、其他"></a>四、其他</h2><h5 id="1-包装器、自动装箱"><a href="#1-包装器、自动装箱" class="headerlink" title="1.包装器、自动装箱"></a>1.包装器、自动装箱</h5><p>&emsp;&emsp;Integer、Long、Float、Double、Short、Byte、Character、Void和Boolean。</p>
+<p>&emsp;&emsp;对象包装类是不可变的，还是<code>final</code>的。</p>
+<h5 id="2-参数可变的方法"><a href="#2-参数可变的方法" class="headerlink" title="2.参数可变的方法"></a>2.参数可变的方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">max</span><span class="params">(<span class="keyword">double</span>...nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> max = Double.NEGATIVE_INFINITY;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">double</span> num:nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(num&gt;max)&#123;</span><br><span class="line">                max = num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> max = max(<span class="number">3.1</span>,<span class="number">5.2</span>,<span class="number">999</span>,-<span class="number">123</span>);</span><br><span class="line"><span class="comment">// 实际上，编译器将 new double[]&#123;3.1,5.2,999,-123&#125;传递给 max 方法</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>3.枚举类</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Size</span></span>&#123;SMALL, MEDIUM, LARGE;&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-枚举类"><a href="#3-枚举类" class="headerlink" title="3.枚举类"></a>3.枚举类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Size</span></span>&#123;SMALL, MEDIUM, LARGE;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>实际上，该声明定义的类型是一个类。有三个实例，尽量不要构造新对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以在枚举类型中添加一些构造器、域和方法</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Size</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 构造器只在构造枚举常量时调用</span></span><br><span class="line">    SMALL(<span class="string">&quot;s&quot;</span>), MEDIUM(<span class="string">&quot;m&quot;</span>), LARGE(<span class="string">&quot;l&quot;</span>);</span><br><span class="line">    <span class="keyword">private</span> String abb;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Size</span><span class="params">(String abb)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.abb = abb;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAbb</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> abb;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p>所有枚举类型都是 Enum 类的子类</p>
+<li><p>所有枚举类型都是 <code>Enum</code> 类的子类</p>
 </li>
-<li><p>toString 方法返回枚举常量名，其逆方法为 valueOf</p>
+<li><p><code>toString</code> 方法返回枚举常量名，其逆方法为 <code>valueOf</code></p>
 </li>
-<li><p>每个枚举类型都一个 values 方法，返回一个包含全部枚举值得数组。</p>
+<li><p>每个枚举类型都一个 <code>values</code> 方法，返回一个包含全部枚举值得数组。</p>
 </li>
 </ul>
 <h2 id="五、反射"><a href="#五、反射" class="headerlink" title="五、反射"></a>五、反射</h2><p>待续</p>
@@ -448,6 +434,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2020/11/10/Java-study-interface-lambda-inner-class/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java学习笔记-接口、lambda和内部类
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/11/03/Java-study-objects-and-classes/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Java学习笔记-对象与类</div>
@@ -477,7 +472,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">一、类、超类和子类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Object"><span class="toc-number">2.</span> <span class="toc-text">二、Object</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84%E5%88%97%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">三、泛型数组列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96"><span class="toc-number">4.</span> <span class="toc-text">四、其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8F%8D%E5%B0%84"><span class="toc-number">5.</span> <span class="toc-text">五、反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%BB%A7%E6%89%BF%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-number">6.</span> <span class="toc-text">六、继承的设计技巧</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%B1%BB%E3%80%81%E8%B6%85%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">一、类、超类和子类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E8%A6%86%E7%9B%96%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1.覆盖方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%AD%90%E7%B1%BB%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2.子类构造器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%A4%9A%E6%80%81"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">3.多态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">4.方法调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-final"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">5.final</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">6.强制类型转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-abstract"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">7.abstract</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-protected"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">8.protected</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Object"><span class="toc-number">2.</span> <span class="toc-text">二、Object</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-equals-%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">1.equals 方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-hashCode%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">2.hashCode方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-toString-%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">3.toString 方法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84%E5%88%97%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">三、泛型数组列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96"><span class="toc-number">4.</span> <span class="toc-text">四、其他</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%8C%85%E8%A3%85%E5%99%A8%E3%80%81%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">1.包装器、自动装箱</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%8F%82%E6%95%B0%E5%8F%AF%E5%8F%98%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.0.0.2.</span> <span class="toc-text">2.参数可变的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%9E%9A%E4%B8%BE%E7%B1%BB"><span class="toc-number">4.0.0.3.</span> <span class="toc-text">3.枚举类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8F%8D%E5%B0%84"><span class="toc-number">5.</span> <span class="toc-text">五、反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%BB%A7%E6%89%BF%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7"><span class="toc-number">6.</span> <span class="toc-text">六、继承的设计技巧</span></a></li></ol>
                     </div>
                 </span>
             </div>
