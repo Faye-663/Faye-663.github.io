@@ -42,7 +42,7 @@ https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title19-->
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://faye-663.github.io/2020/11/10/Java-study-exception/1.png">
 <meta property="article:published_time" content="2020-11-10T05:05:12.000Z">
-<meta property="article:modified_time" content="2020-11-10T10:30:50.730Z">
+<meta property="article:modified_time" content="2020-11-10T10:51:33.657Z">
 <meta property="article:author" content="liyao deng">
 <meta property="article:tag" content="读书笔记">
 <meta property="article:tag" content="Java核心技术">
@@ -259,6 +259,7 @@ var _hmt = _hmt || [];
 <p>内层的 <code>try</code> 语句，确保 <code>finally</code> 子句的执行。外层的 <code>try</code> 语句确保报告错误，且将报告 <code>finally</code> 子句中出现的错误。</p>
 </blockquote>
 <p>&emsp;&emsp;当利用 <code>return</code> 从 <code>try</code> 中退出时，在返回前，<code>finally</code> 子句的内容将执行。若 <code>finally</code> 子句中也有 <code>return</code> 语句，将会覆盖之前的返回值。</p>
+<p>&emsp;&emsp;<code>finally</code> 子句抛出异常同上述 <code>return</code> 。会抑制 <code>try</code> 中的异常，应该使用异常变量将其暂存，然后调用 <code>addSuppressed</code>，添加原始异常，再抛出。</p>
 <h5 id="3-再次抛出异常和异常链"><a href="#3-再次抛出异常和异常链" class="headerlink" title="3.再次抛出异常和异常链"></a>3.再次抛出异常和异常链</h5><p>&emsp;&emsp;包装异常，将原始异常设置为新异常的原因。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">catch</span>(SQLException e)&#123;</span><br><span class="line">Throwable se = <span class="keyword">new</span> NewException(<span class="string">&quot;new exception&quot;</span>);</span><br><span class="line">se.initCause(e);</span><br><span class="line"><span class="keyword">throw</span> se;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

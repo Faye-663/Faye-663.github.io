@@ -1,7 +1,3 @@
-https://faye-663.github.io/2020/11/03/Java-study-objects-and-classes/
-https://faye-663.github.io/2020/11/03/Java-study-extends/
-https://faye-663.github.io/2020/11/02/Java-study-basic-programming-structure/
-https://faye-663.github.io/2020/11/01/Hexo-yilia-Valine-GitHub-Pages-Blog-building/
-https://faye-663.github.io/2020/11/10/Java-study-exception/
-https://faye-663.github.io/2020/11/10/Java-study-interface-lambda-inner-class/
 https://faye-663.github.io/2020/11/10/Java-study-generic/
+https://faye-663.github.io/2020/11/10/Java-study-exception/
+https://faye-663.github.io/2020/11/03/Java-study-objects-and-classes/
